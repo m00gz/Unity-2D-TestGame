@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Spikes
   - Falls
+  - JumpPad
+  - JumpPad_Side
   layers:
   - Default
   - TransparentFX

@@ -73,5 +73,13 @@ public class PlayerControl : MonoBehaviour {
 			//Destroy (this.gameObject);
 			this.transform.position = respawnPoint.position;
 		}
+
+		if (other.tag == "JumpPad") {
+			rb.velocity = Vector2.up * jumpForce * 2;
+		}
+
+		if (other.tag == "JumpPad_Side") {
+			rb.velocity = Vector2.left * jumpForce * 2;
+		}
 	}
 }
