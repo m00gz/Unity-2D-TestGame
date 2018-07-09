@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -34,3 +35,6 @@ sysinfo.txt
 *.unitypackage
 
 *.txt
+=======
+*.txt
+>>>>>>> parent of 4c6029d... Ignore file that are newly created on every build
