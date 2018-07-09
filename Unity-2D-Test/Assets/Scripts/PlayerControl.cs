@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour {
 	public float chkRadius;
 	public int jumpCount;
 	public Transform chkOnGround;
+	public Transform respawnPoint;
 	public LayerMask groundName;
 
 	int extraJump;
@@ -48,12 +49,12 @@ public class PlayerControl : MonoBehaviour {
 			extraJump = jumpCount;
 		}
 
-		if (Input.GetKeyDown (KeyCode.X) && extraJump > 0) {
+		if (Input.GetKeyDown (KeyCode.Space) && extraJump > 0) {
 			rb.velocity = Vector2.up * jumpForce;
 			extraJump--;
 		}
 
-		else if (Input.GetKeyDown (KeyCode.X) && extraJump == 0 && isOnGround == true) {
+		else if (Input.GetKeyDown (KeyCode.Space) && extraJump == 0 && isOnGround == true) {
 			rb.velocity = Vector2.up * jumpForce;
 		}
 	}
@@ -63,5 +64,14 @@ public class PlayerControl : MonoBehaviour {
 		Vector3 scaleVal = transform.localScale;
 		scaleVal.x *= -1;
 		transform.localScale = scaleVal;
+	}
+
+	void OnTriggerEnter2D (Collider2D other) {
+
+		// Spawn back to spawnPoint location (or maybe try to do some deaths)
+		if (other.tag == "Spikes" || other.tag == "Falls") {
+			//Destroy (this.gameObject);
+			this.transform.position = respawnPoint.position;
+		}
 	}
 }

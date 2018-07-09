@@ -12,7 +12,6 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
@@ -50,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Reference Include="Vuforia.UnityExtensions.Editor">
       <HintPath>C:\Program Files\Unity\Editor\Data\PlaybackEngines\VuforiaSupport\Managed\Editor\Vuforia.UnityExtensions.Editor.dll</HintPath>
