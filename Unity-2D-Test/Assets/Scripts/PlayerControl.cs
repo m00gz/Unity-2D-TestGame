@@ -69,7 +69,7 @@ public class PlayerControl : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 
 		// Spawn back to spawnPoint location (or maybe try to do some deaths)
-		if (other.tag == "Spikes" || other.tag == "Falls") {
+		if (other.tag == "Falls") {
 			//Destroy (this.gameObject);
 			this.transform.position = respawnPoint.position;
 		}
